@@ -70,4 +70,12 @@ public class BankAccount {
         this.withdraw(amount);
         target.deposit(amount);
     }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
 }

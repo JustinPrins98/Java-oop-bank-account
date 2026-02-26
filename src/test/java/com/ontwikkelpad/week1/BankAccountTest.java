@@ -119,4 +119,29 @@ class BankAccountTest {
             bankAccountSource.transferTo(bankAccountSource, BigDecimal.valueOf(10));
         });
     }
+
+    @Test
+    void get_account_number_returns_correct_value() {
+        // Arrange
+        BankAccount bankAccount = new BankAccount("123", "Justin");
+
+        // Act
+        String accountNumber = bankAccount.getAccountNumber();
+
+        // Assert
+        assertEquals("123", accountNumber);
+
+    }
+
+    @Test
+    void get_owner_name_returns_correct_value() {
+        // Arrange
+        BankAccount bankAccount = new BankAccount("123", "Justin");
+
+        // Act
+        String ownerName = bankAccount.getOwnerName();
+
+        // Assert
+        assertEquals("Justin", ownerName);
+    }
 }
